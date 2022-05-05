@@ -1,0 +1,75 @@
+* {
+  /*seletor universal, seleciona todos os elementos*/
+  margin: 0;
+}
+
+:root {
+  /*raiz do meu projeto*/
+  /*Criando variáveis para serem usadas posteriormente*/
+  /*hsl(define a cor, define a saturação da cor, define a luminosidade da cor)*/
+  /*quando é hsla, por último fica a opacidade, sendo o máximo 1*/
+  --primary-color: hsl(170, 100%, 26%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+
+  /*Por padrão do navegador as fontes são equivalentes a 16 px, então o font-size: 100% = 16px*/
+  /*É importante colocar em rem devido a acessibilidade, se o usuário utilizar o rem é 
+  possível alterar o tamanho, caso utilize o px, não será possível alterar ao aplicar o zoom*/
+  font-size: 62.5%; /*1rem = 10 px*/
+}
+
+body {
+  font-family: 'DM Sans';
+  font-size: 1.6rem; /*16px*/
+  text-align: center;
+}
+
+header {
+  width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4.1rem;
+}
+
+h4 {
+  font-size: 1.4rem; /*14px*/
+  color: var(--primary-color); /*chama a variável que foi declarada em cima*/
+  margin-bottom: 1.6rem;
+}
+
+h1 {
+  font-size: 3.4rem; /*34px*/
+  color: var(--headline);
+  line-height: 130%; /*distâcia entre as linhas do próprio elemento, quando ocupa mais de uma linha*/
+  margin-bottom: 2.4rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-weight: 400; /*padrão da fonte é o peso da fonte*/
+  color: var(--paragraph);
+  margin-bottom: 3.2rem;
+}
+
+button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 4rem;
+  margin-bottom: 6rem;
+  height: 6.2rem;
+  width: 26.3rem;
+
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
